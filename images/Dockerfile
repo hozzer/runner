@@ -7,7 +7,7 @@ ARG RUNNER_VERSION
 ARG RUNNER_CONTAINER_HOOKS_VERSION=0.4.0
 ARG DOCKER_VERSION=24.0.6
 
-RUN apt update -y && apt install curl unzip -y
+RUN apt update -y && apt install curl unzip git -y
 
 WORKDIR /actions-runner
 RUN export RUNNER_ARCH=${TARGETARCH} \
